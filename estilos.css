@@ -1,0 +1,95 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  color: #f7d774;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #f7d774aa;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.tarjeta {
+  background: rgba(247, 215, 116, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px #f7d77488;
+  width: 250px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #f7d774cc;
+}
+
+.imagen {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  flex-shrink: 0;
+}
+
+.nombre {
+  font-weight: 700;
+  padding: 12px 15px;
+  font-size: 1.2rem;
+  background-color: #f7d774dd;
+  color: #222;
+  user-select: none;
+}
+
+.contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 15px;
+  text-align: justify;
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.tarjeta.abierta .contenido {
+  max-height: 300px;
+  padding: 15px 15px 20px;
+  color: #e3e3e3c7;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #f7d774aa;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    width: 90%;
+  }
+}
